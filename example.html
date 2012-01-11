@@ -1,0 +1,87 @@
+<html>
+<head>
+    <script src="<your mootools distro here>"></script>
+    <script src="formvalidator.js"></script>
+
+</head>
+<body>
+<form id="regOneForm" class="form_basic" name="regOneForm" action="reg1" method="post">
+    <input type="hidden" id="submitted" name="submitted" value="true" />
+    <div class="row">
+        <div id="validate_name">
+            <label for="location">Full Name</label>
+            <input id="name" name="name" type="text" value=""/>
+            <div class="sidetip" style="display:none">
+              <p class="ok"></p>
+              <p class="tip">Enter your first and last name.</p>
+              <p class="invalid error" role="alert">Full name is required!</p>
+              <p class="blank error" role="alert">A name is required!</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div id="validate_username">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" value=""/>
+            <div class="sidetip" style="display:none">
+              <p class="ok"></p>
+              <p class="tip">Choose a unique username</p>
+              <p class="checking">Validating...</p>
+              <p class="taken error" role="alert">This username is already taken!</p>
+              <p class="invalid error" role="alert">Invalid username!</p>
+              <p class="blank error" role="alert">A username is required!</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div id="validate_gender">
+            <label for="gender" style="padding-top:4px;">Gender</label>
+                <input type="radio" name="gender" id="female"/> Female <input type="radio" id="male" name="gender"/> Male
+            <div id="gender_error" class="sidetip" style="display:none">
+              <p class="blank error" role="alert">A gender is required!</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="validate_email">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" value=""/>
+            <div class="sidetip" style="display:none">
+              <p class="tip">What’s your email address?</p>
+              <p class="ok"></p>
+              <p class="checking">Validating...</p>
+              <p class="invalid error" role="alert">Invalid Email.</p>
+              <p class="blank error" role="alert">An email is required!</p>
+
+              <p class="taken error" role="alert">Email taken.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="validate_password">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" value=""/>
+            <div class="sidetip" style="display:none">
+              <p class="tip">6 characters or more</p>
+              <p class="perfect">Perfect!</p>
+              <p class="ok"></p>
+              <p class="weak error" role="alert">Not secure enough.</p>
+              <p class="obvious error" role="alert">Too obvious.</p>
+              <p class="invalid error" role="alert">6 character minimum.</p>
+              <p class="blank error" role="alert">Password cannot be blank!</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button id="submitBtn" class="callout_button input_aligned" onclick="submitRegOne(); return false;">Continue</button>
+    </div>
+</form>
+</body>
+<script>
+var validator = new FormValidator();
+</script>
+
+</html>
