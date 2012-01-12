@@ -1,7 +1,7 @@
 ## Example Usage
 ### Instantiating an object. 
 
-``` Javascript
+``` javascript
 var validator = new FormValidator();
 
 ```
