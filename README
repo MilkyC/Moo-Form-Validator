@@ -1,5 +1,5 @@
-
-### Example Usage
+## Example Usage
+### Instantiating an object. 
 
 ``` Javascript
 var validator = new FormValidator();
