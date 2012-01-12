@@ -1,5 +1,5 @@
 
-### JSON Request
+### Example Usage
 
 ``` Javascript
 var validator = new FormValidator();
