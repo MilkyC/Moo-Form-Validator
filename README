@@ -1,0 +1,7 @@
+
+### JSON Request
+
+``` Javascript
+var validator = new FormValidator();
+
+```
